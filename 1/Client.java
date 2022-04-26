@@ -1,5 +1,6 @@
 import java.rmi.*;
 import java.util.Scanner;
+import java.math.*;
 
 public class Client {
     public static void main(String args[]) {
@@ -74,7 +75,7 @@ public class Client {
                             if (monto.equals("atras".toLowerCase())){
                                 break;
                             } else {
-                                int mont = Integer.parseInt(monto);
+                                int mont = Math.abs((Integer.parseInt(monto)));
                                 String type = client.tipo(user);
                                 if (type.equals("Individual")){
                                     System.out.println("Usuario de tipo: " + client.tipo(user));
@@ -103,7 +104,7 @@ public class Client {
                             if (monto.equals("atras".toLowerCase())){
                                 break;
                             } else {
-                                int mont = Integer.parseInt(monto);
+                                int mont = Math.abs(Integer.parseInt(monto));
                                 String type = client.tipo(user);
                                 if (type.equals("Individual")){
                                     System.out.println("Usuario de tipo: " + client.tipo(user));
